@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Barlow|Tomorrow:400,700&display=swap");
+
 *{
   margin: 0;
   padding: 0;
@@ -15,16 +16,20 @@ body{
   background-color: var(--blue-color);
 }
 body:after{
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  min-width: 100%;
+  min-height: 100%;
   content: "";
-  background-image: url("cyberpunkbackground.jpg");
-  background-size: 100vw 100vh;
+  background-image: url("cyberpunkbackground.jpg") ;
   background-repeat: no-repeat;
+  background-size: cover;
   opacity: 0.92;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
-  position: absolute;
   z-index: -1;   
 }
 :root {
@@ -134,7 +139,18 @@ h1{
     font-size: 0.8rem;
 
     }
+    body{
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding-top: 15vh;
+      font-family: Tomorrow, sans-serif;
+      font-size: .85rem;
+      background-color: var(--black-color);
+    }
     body:after{
       background-image: url("cyberpunk_2077.jpg");
+      opacity: 0.7;
     }
 }
