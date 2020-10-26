@@ -1,13 +1,7 @@
 import React from 'react';
 import './App.css';
 
-
 const Result = (object) => {
-
-
-
-
-
     return (
         <>
             {object ?
@@ -17,7 +11,6 @@ const Result = (object) => {
                 </div>
                 : null}
         </>
-
     );
 }
 

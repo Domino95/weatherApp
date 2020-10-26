@@ -1,43 +1,29 @@
 @import url("https://fonts.googleapis.com/css?family=Barlow|Tomorrow:400,700&display=swap");
 
 *{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body{
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  padding-top: 15vh;
-  font-family: Tomorrow, sans-serif;
-  font-size: .85rem;
-  background-color: var(--blue-color);
-  overflow: hidden;
-}
-body:after{
-  position: fixed; 
-  top: 0; 
-  left: 0; 
-  min-width: 100%;
-  min-height: 100%;
-  content: "";
-  background-image: url("cyberpunkbackground.jpg") ;
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 0.92;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: -1;   
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
 :root {
-  --yellow-color: #fcee09; 
-  --red-color: #ff003c;
-  --black-color: #050a0e;
-  --blue-color: #00f0ff;
+--yellow-color: #fcee09; 
+--red-color: #ff003c;
+--black-color: #050a0e;
+--blue-color: #00f0ff;
+}
+body{
+width: 100vw;
+height: 100vh;
+display: flex;
+justify-content: center;
+padding-top: 15vh;
+font-family: Tomorrow, sans-serif;
+font-size: .85rem;
+background-image: url("cyberpunkbackground.jpg") ;
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+overflow: hidden;
 }
 .inputWrapper{
 height:20vh;
@@ -46,39 +32,37 @@ justify-content: center;
 align-items: center;
 }
 .inputElement {
-  width: 250px;
-  height: 50px; 
-  outline: none;
-  background-color: var(--black-color);
-  cursor: pointer;
-  position: relative;
-  text-transform: uppercase;
-  color: var(--black-color);
-  clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
+width: 250px;
+height: 50px; 
+outline: none;
+background-color: var(--black-color);
+cursor: pointer;
+position: relative;
+text-transform: uppercase;
+color: var(--black-color);
+clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
 }
 input{
-  width:97.5%;
-  border:1px var(--black-color);;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  outline:none;
-  top: 3px;
-  left: 3px;
-  right: 3px;
-  bottom: 3px;
-  background-color: var(--yellow-color);
-  clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
-  font-size: 1.7em;
-  font-family: Tomorrow, sans-serif;
-  text-transform: uppercase;
-  padding-left: 1vw;
-  
+width:97.5%;
+border:1px var(--black-color);;
+display: flex;
+align-items: center;
+justify-content: center;
+position: absolute;
+outline:none;
+top: 3px;
+left: 3px;
+right: 3px;
+bottom: 3px;
+background-color: var(--yellow-color);
+clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
+font-size: 1.7em;
+font-family: Tomorrow, sans-serif;
+text-transform: uppercase;
+padding-left: 1vw;
 }
-
 input:focus{
-  outline:none
+outline:none
 }
 .result{
 font-size: 1.8rem;
@@ -99,59 +83,45 @@ margin-bottom: 10px;
 position: relative;
 }
 h1:after{
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 1.2vh;
-  bottom: -10px;
-  left:0px;
-  right:0px;
-  background-color: var(--black-color);
-  clip-path: polygon(50% 0%, 100% 0, 100% 11%, 47% 11%, 41% 86%, 0 86%, 0 0);
+content: "";
+position: absolute;
+width: 100%;
+height: 1.2vh;
+bottom: -10px;
+left:0px;
+right:0px;
+background-color: var(--black-color);
+clip-path: polygon(50% 0%, 100% 0, 100% 11%, 47% 11%, 41% 86%, 0 86%, 0 0);
 }
 h3::after{
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 1vh;
-  bottom: -10px;
-  left:0px;
-  right:0px;
-  background-color: var(--black-color);
-  clip-path: polygon(50% 0%, 100% 0, 100% 11%, 47% 11%, 41% 86%, 0 86%, 0 0);
+content: "";
+position: absolute;
+width: 100%;
+height: 1vh;
+bottom: -10px;
+left:0px;
+right:0px;
+background-color: var(--black-color);
+clip-path: polygon(50% 0%, 100% 0, 100% 11%, 47% 11%, 41% 86%, 0 86%, 0 0);
 }
 h1{
-  text-transform: uppercase;
+text-transform: uppercase;
 }
-   
-
 @media(max-width: 767px){
+body{
+height: calc(var(--vh, 1vh) * 100);
+}  
 .inputElement {
-    width: 180px;
-    height: 40px; 
-  }
-  input{
-    width:96.5%;
-    font-size: 1.2em;
-    border:1px var(--black-color);
-    padding-left: 10px;
-  }
-  .result{
-    font-size: 0.8rem;
-
-    }
-    body{
-      width: 100vw;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      padding-top: 15vh;
-      font-family: Tomorrow, sans-serif;
-      font-size: .85rem;
-      background-color: var(--black-color);
-    }
-    body:after{
-      background-image: url("cyberpunk_2077.jpg");
-      opacity: 0.7;
-    }
+width: 180px;
+height: 40px; 
+}
+input{
+width:96.5%;
+font-size: 1.2em;
+border:1px var(--black-color);
+padding-left: 10px;
+}
+.result{
+font-size: 0.8rem;
+}
 }

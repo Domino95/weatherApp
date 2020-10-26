@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './App.css';
 import gsap from "gsap"
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 function App() {
   const [object, setobject] = useState()
@@ -42,7 +44,7 @@ function App() {
         })
         .catch(error => {
           if (error.status === 404) {
-            seterror("Takie miasto nie istnieje")
+            seterror("City not found")
             setobject(null)
             animationError()
           }
@@ -50,9 +52,7 @@ function App() {
     }
   }
   return (
-
     <>
-
       <div className="inputWrapper">
         <div className="inputElement">
           <input
@@ -64,18 +64,13 @@ function App() {
           </input>
         </div>
       </div>
-
-
       {object ?
-
         < div className="result">
           <h1 id="h1" >  {object.name} </h1>
           <h2 id="h2">{parseInt(object.main.temp - 273.15)}&deg;C </h2>
           <h4 id="h4"> Wind: {object.wind.speed} m/s</h4>
           <h5 id="h5"> Pressure: {object.main.pressure} hPa</h5>
-
         </div>
-
         : null
       }
       {error ? <div className="result"><h3 id="h3">{error}</h3></div> : null}
